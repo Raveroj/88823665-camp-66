@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="mystyle.css">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshop #HTML - Form</title>
@@ -9,6 +16,7 @@
 
 <body>
     <h1>Workshop #HTML - FORM</h1>
+
     <hr>
     <form>
         <table>
@@ -17,12 +25,6 @@
                 <td><input type="text" id="fname" name="fname"></td>
             </tr>
             <tr>
-
-
-
-
-
-                
                 <td><label for="lname">สกุล:</label></td>
                 <td><input type="text" id="lname" name="lname"></td>
             </tr>
@@ -32,10 +34,10 @@
             </tr>
             <tr>
                 <td><label for="age">อายุ:</label></td>
-                <td><input type="number" id="age" name="age" min="0"></td>
+                <td><input type="number" id="age" name="age"></td>
             </tr>
             <tr>
-                <td>เพศ:</td>
+                <td><label for="">เพศ:</label></td>
                 <td>
                     <input type="radio" id="male" name="gender" value="male">
                     <label for="male">ชาย</label>
@@ -63,7 +65,7 @@
                 </td>
             </tr>
             <tr>
-                <td>แนวเพลงที่ชอบ:</td>
+                <td><label for="music">แนวเพลงที่ชอบ:</label></td>
                 <td>
                     <input type="radio" id="pop" name="music" value="pop">
                     <label for="pop">Pop</label>
@@ -74,7 +76,7 @@
                 </td>
             </tr>
             <tr>
-                <td>การยินยอม:</td>
+                <td><label for="accept">การยินยอม</label></td>
                 <td>
                     <input type="checkbox" id="consent" name="consent" value="yes">
                     <label for="consent">ยินยอมให้เก็บข้อมูล</label>
@@ -88,7 +90,7 @@
             </tr>
         </table>
     </form>
-    <img src="meme.png" alt="รูป meme">
+    <img src="meme/meme.png" alt="รูป meme">
 </body>
 
 </html>

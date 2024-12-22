@@ -22,9 +22,9 @@
                 </div>
             </form>
             <?php
-            if (isset($_POST['ตัวเลขแรก']) && isset($_POST['ตัวเลขสุดท้าย'])&&($_POST['ตัวเลขแรก'] < $_POST['ตัวเลขสุดท้าย'])) { //ส่วนเช็คว่า ค่าเริ่มตต้น กับ ค่าสุดท้ายมีรึยัง พร้อมกับเช็คว่า ค่าเริ่ม ต้อง น้อยกว่า ค่าท้าย เสมอ
-                                                                          
-                $number = (int) $_POST['ตัวเลขแรก'];
+            if (isset($_POST['ตัวเลขแรก']) && isset($_POST['ตัวเลขสุดท้าย'])) { //ส่วนเช็คว่า ค่าเริ่มตต้น กับ ค่าสุดท้ายมีรึยัง พร้อมกับเช็คว่า ค่าเริ่ม ต้อง น้อยกว่า ค่าท้าย เสมอ
+                if ($_POST['ตัวเลขแรก'] < $_POST['ตัวเลขสุดท้าย']) {
+                    $number = (int) $_POST['ตัวเลขแรก'];
                 $number2 = (int) $_POST['ตัวเลขสุดท้าย'];
                 echo "<h2>เลขคู่หรือคี่ $number - $number2</h2>";
                 echo "<table class='table table-bordered'>";
@@ -38,9 +38,10 @@
                     
                 }
                 echo "</table>";
-            }elseif ($_POST['ตัวเลขแรก'] > $_POST['ตัวเลขสุดท้าย']) {
-                echo "<div class='alert alert-danger'>กรุณากรอกเลขเริ่มต้นให้น้อยกว่าค่าสิ้นสุด</div>";
-            }            
+                }else{
+                    echo "<div class='alert alert-danger'>กรุณากรอกเลขเริ่มต้นให้น้อยกว่าค่าสิ้นสุด</div>";
+                }                                                                        
+            }          
             elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "<div class='alert alert-danger'>กรุณากรอกใหม่อีกครั้ง</div>";
             }

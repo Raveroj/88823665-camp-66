@@ -8,7 +8,7 @@
 
 <body>
     <div class="container mt-5">
-        <?php $myvar = 2; ?>
+        <?php $myvar = 2; ?> <!-- $myvar = 2; กำหนดตัวแปล myvar = 2; -->
         <h1>สูตรคูณแม่ <?php echo $myvar; ?></h1>
         <?php
         for ($i = 1; $i <= 12; $i++) {

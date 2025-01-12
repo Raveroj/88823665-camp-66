@@ -6,11 +6,10 @@ use Illuminate\Http\Request;
 
 class Mycontroller extends Controller
 {
-    //
-    function myfunction (Request $req , $var1=""){
-        $data['value_id'] = $var1;
-        $data['myinput'] = $req->input('myinput');
-        return view ('myview', $data);
+    public function myfunction(Request $req)
+    {
+        $data = [];//ตัวแปร
+        $data['myinput'] = $req->input('myinput'); //ส่วนกำหนดว่า myinput มีค่าเท่ากับ input 
+        return view('myview', $data);
     }
-
 }

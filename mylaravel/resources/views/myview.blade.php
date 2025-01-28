@@ -19,7 +19,7 @@
         <button type="submit" class="btn btn-primary">สร้างตาราง</button>
     </form>
 
-    <!-- แสดงผลตารางสูตรคูณ -->
+    <!-- ตารางสูตรคูณ -->
     @if(isset($myinput) && is_numeric($myinput))
         <h2 class="text-center">ตารางแม่สูตรคูณ แม่ {{ $myinput }}</h2>
         <ul class="list-group">

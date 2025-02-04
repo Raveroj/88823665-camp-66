@@ -20,7 +20,7 @@ Route::post('/mycontroller/{id?}',
 [Mycontroller::class,'myfunction']);
 
 Route ::get('/',function(){
-    return view('layouts.default');
+    return view('layout.default');
 });
 
 Route ::get('/home',function(){
@@ -30,8 +30,9 @@ Route ::get('/home',function(){
 Route ::get('/login',
 [LoginController::class,'index']);
 
-Route ::get('/register',
-[RegisterController::class,'register']);
+Route::get('/register',
+ [RegisterController::class, 'index']);
+
 
 Route ::post('/register',
 [RegisterController::class,'create']);

@@ -46,5 +46,5 @@ Route ::get('/user/{id}',
 Route ::put ('/user',
 [UserController::class,'saveEdit']);
 
-Route ::delete ('/user',
-[UserController::class,'delete']);
+Route::delete('/user/{id}',
+[UserController::class, 'delete'])->name('user.destroy');

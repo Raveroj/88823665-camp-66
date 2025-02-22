@@ -30,7 +30,7 @@ Route::post('/login',  [LoginController::class,'login']);
 
 
 Route::get('/user/{id}',  [UserController::class,'edit']);
-Route::put('/user' ,[UserController::class, 'edit_user']);
+Route::put('/user' ,[UserController::class, 'edit_user']);//update
 Route::delete('/user',[UserController::class, 'delete']);
 
 // Route::get('/login',function(){

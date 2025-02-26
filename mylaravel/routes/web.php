@@ -29,8 +29,8 @@ Route::post('/login',  [LoginController::class,'login']);
 
 
 
-Route::get('/user/{id}',  [UserController::class,'edit']);
-Route::put('/user' ,[UserController::class, 'edit_user']);//update
+Route::get('/user/{id}', [UserController::class,'user_edit']);
+Route::put('/user', [UserController::class, 'saveEdit']); //update
 Route::delete('/user',[UserController::class, 'delete']);
 
 // Route::get('/login',function(){

@@ -12,9 +12,9 @@ class UserController extends Controller
         $users = User::all();
         return view('User',['users'=>$users]);
     }
-    function edit($id){
+    public function user_edit($id){
         $user = User::find($id);
-        return view('user_edit',['user'=>$user]);
+        return view('user_edit', ['user' => $user]);
     }
     function saveEdit(Request $req){
         $user = User::find($req->id);
